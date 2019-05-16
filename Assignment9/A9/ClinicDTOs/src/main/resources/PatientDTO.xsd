@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schema targetNamespace="http://cs548.stevens.edu/clinic/dto"
+	elementFormDefault="unqualified" xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+	jaxb:version="2.1"
+	xmlns:tns="http://cs548.stevens.edu/clinic/dto" attributeFormDefault="unqualified">
+	
+	<element name="patient-dto">
+		<complexType>
+			<sequence>
+				<element name="id" type="long" />
+				<element name="patient-id" type="long" />
+				<element name="name" type="string" />
+				<element name="dob" type="date" />
+				<element name="age" type="int" />
+				<element name="treatments" type="long" nillable="true"
+					minOccurs="0" maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+
+	<element name="treatment-dto">
+		<complexType>
+			<sequence>
+				<element name="id" type="long" />
+				<element name="diagnosis" type="string" />
+				<element name="patient" type="long" />
+				<element name="provider" type="long" />
+				<choice>
+					<element name="drug_treatment" type="tns:DrugTreatmentType" />
+					<element name="surgery" type="tns:SurgeryType" />
+					<element name="radiology" type="tns:RadiologyType" />
+				</choice>
+			</sequence>
+		</complexType>
+	</element>
+	<complexType name="DrugTreatmentType">
+		<sequence>
+			<element name="name" type="string" />
+			<element name="dosage" type="float" />
+		</sequence>
+	</complexType>
+	<complexType name="SurgeryType">
+		<sequence>
+			<element name="date" type="date" />
+		</sequence>
+	</complexType>
+	<complexType name="RadiologyType">
+		<sequence>
+			<element maxOccurs="unbounded" minOccurs="1" name="date"
+				type="date" />
+		</sequence>
+	</complexType>
+
+	<element name="provider-dto">
+		<complexType>
+			<sequence>
+				<element name="id" type="long" />
+				<element name="NPI" type="long" />
+				<element name="specialization" type="string" />
+			</sequence>
+		</complexType>
+	</element>
+
+</schema>
+
