@@ -1,0 +1,1 @@
+SELECT * From provider_treatment where npi=87654321;

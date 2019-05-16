@@ -1,0 +1,63 @@
+@prefix clinic: <http://example.org/clinic#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl:<http://www.w3.org/2002/07/owl#>. 
+@prefix xsd:<http://www.w3.org/2001/XMLSchema#>.
+
+clinic:Treatment a owl:Class.
+clinic:Provider a owl:Class.
+clinic:Patient a owl:Class.
+
+clinic:Surgeons a clinic:Provider. 
+clinic:Radiologists a clinic:Provider. 
+clinic:Internists a clinic:Provider.
+
+clinic:RadiologyPatient a clinic:Patient.
+
+clinic:Surgery a owl:Class.
+clinic:Radiology a owl:Class.
+clinic:DrugTreatment a owl:Class.
+
+clinic:ProvidedBy a owl:ObjectProperty;
+       rdfs:domain clinic:Treatment;
+       rdfs:range clinic:Provider;
+       owl:inverseOf clinic:Provide.
+clinic:Provide a owl:ObjectProperty.
+
+clinic:ReceivedBy a owl:ObjectProperty;
+        rdfs:domain clinic:Treatment;
+       rdfs:range clinic:Patient;
+       owl:inverseOf clinic:Receive.
+clinic:Receive a owl:ObjectProperty.
+
+clinic:RadiologistProvided a owl:Class ;
+    rdfs:subClassOf clinic:Treatment ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:HasValue clinic:Radiologists ;
+            owl:OnProperty clinic:ProvidedBy ].
+clinic:RadiologyPatient clinic:Receive clinic:RadiologistProvided.
+      
+clinic:Treatment
+       rdf:type owl:Class;
+       owl:oneof(clinic:Surgery clinic:Radiology clinic:DrugTreatment).
+
+[a owl:AllDifferent;
+   owl:distinctMembers(clinic:Surgery clinic:Radiology clinic:DrugTreatment)].
+
+
+clinic:PatientId a rdf:Property ;
+    rdfs:domain clinic:Patient ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:FunctionalProperty clinic:Patient ;
+            owl:inverseFunctionalProperty clinic:Patient ] .
+
+clinic:John a clinic:Patient.
+clinic:panacea a clinic:DrugTreatment.
+clinic:panacea clinic:ReceivedBy clinic:John.
+
+clinic:suicide a clinic:Radiology .
+clinic:suicide clinic:ReceivedBy clinic:John.
+
+clinic:Smith a clinic:RadiologyPatient .
+clinic:ICU a clinic:RadiologistProvided.
+clinic:Smith clinic:Receive clinic:ICU.

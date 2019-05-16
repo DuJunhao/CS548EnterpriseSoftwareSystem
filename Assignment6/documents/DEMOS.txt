@@ -1,0 +1,14 @@
+PatientDto DEMO3
+IPatientServiceInterface DEMO4
+PatientService DEMO5
+PatientService(getPatientByDbId) PatientDto DEMO6
+PatientService(createPatient,deletePatient) DEMO7
+TreatmentDto DEMO8
+SurgeryType DateAdapter DEMO9
+PatientService(addDrugTreatment,deleteTreatment) DEMO10
+PatientService(getTreatments) TreatmentPdoToDto 	DEMO11
+IPatientWebService DEMO12
+PatientWebService DEMO13
+siteInfo DEMO14
+ClinicAPP webservice DEMO15 
+ClinicServiceClient DEMO16

@@ -1,0 +1,1 @@
+SELECT * From patient_treatment where patientid=12345678;

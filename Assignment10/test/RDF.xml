@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:clinic="http://example.org/clinic#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <clinic:RadiologyPatient rdf:about="http://example.org/clinic#Smith">
+    <clinic:Receive>
+      <clinic:RadiologistProvided rdf:about="http://example.org/clinic#ICU"/>
+    </clinic:Receive>
+  </clinic:RadiologyPatient>
+  <clinic:Provider rdf:about="http://example.org/clinic#Surgeons"/>
+  <rdf:Property rdf:about="http://example.org/clinic#PatientId">
+    <owl:equivalentClass>
+      <owl:Restriction rdf:nodeID="ub88bL49C25">
+        <owl:inverseFunctionalProperty rdf:resource="http://example.org/clinic#Patient"/>
+        <owl:FunctionalProperty rdf:resource="http://example.org/clinic#Patient"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:domain rdf:resource="http://example.org/clinic#Patient"/>
+  </rdf:Property>
+  <owl:AllDifferent rdf:nodeID="ub88bL43C1">
+    <owl:distinctMembers rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://example.org/clinic#Surgery"/>
+      <rdf:Description rdf:about="http://example.org/clinic#Radiology"/>
+      <rdf:Description rdf:about="http://example.org/clinic#DrugTreatment"/>
+    </owl:distinctMembers>
+  </owl:AllDifferent>
+  <owl:ObjectProperty rdf:about="http://example.org/clinic#ReceivedBy">
+    <rdfs:domain rdf:resource="http://example.org/clinic#Treatment"/>
+    <rdfs:range rdf:resource="http://example.org/clinic#Patient"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://example.org/clinic#Receive"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <clinic:Radiology rdf:about="http://example.org/clinic#suicide">
+    <clinic:ReceivedBy>
+      <clinic:Patient rdf:about="http://example.org/clinic#John"/>
+    </clinic:ReceivedBy>
+  </clinic:Radiology>
+  <clinic:DrugTreatment rdf:about="http://example.org/clinic#panacea">
+    <clinic:ReceivedBy rdf:resource="http://example.org/clinic#John"/>
+  </clinic:DrugTreatment>
+  <clinic:Provider rdf:about="http://example.org/clinic#Internists"/>
+  <owl:Class rdf:about="http://example.org/clinic#Treatment">
+    <owl:oneof rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://example.org/clinic#Surgery"/>
+      <rdf:Description rdf:about="http://example.org/clinic#Radiology"/>
+      <rdf:Description rdf:about="http://example.org/clinic#DrugTreatment"/>
+    </owl:oneof>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/clinic#DrugTreatment"/>
+  <clinic:Patient rdf:about="http://example.org/clinic#RadiologyPatient">
+    <clinic:Receive rdf:resource="http://example.org/clinic#RadiologistProvided"/>
+  </clinic:Patient>
+  <owl:ObjectProperty rdf:about="http://example.org/clinic#ProvidedBy">
+    <rdfs:range rdf:resource="http://example.org/clinic#Provider"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://example.org/clinic#Provide"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="http://example.org/clinic#Treatment"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://example.org/clinic#Patient"/>
+  <owl:Class rdf:about="http://example.org/clinic#RadiologistProvided">
+    <owl:equivalentClass>
+      <owl:Restriction rdf:nodeID="ub88bL34C25">
+        <owl:HasValue rdf:resource="http://example.org/clinic#Radiologists"/>
+        <owl:OnProperty rdf:resource="http://example.org/clinic#ProvidedBy"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://example.org/clinic#Treatment"/>
+  </owl:Class>
+  <clinic:Provider rdf:about="http://example.org/clinic#Radiologists"/>
+  <owl:Class rdf:about="http://example.org/clinic#Surgery"/>
+  <owl:Class rdf:about="http://example.org/clinic#Radiology"/>
+  <owl:Class rdf:about="http://example.org/clinic#Provider"/>
+</rdf:RDF>
+
