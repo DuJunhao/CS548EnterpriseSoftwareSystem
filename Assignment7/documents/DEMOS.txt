@@ -1,0 +1,24 @@
+Representations DEMO1
+LinkType DEMO2
+ClinicData.xsd DEMO3
+ClinicData.xsd DEMO4
+jaxbImplClassAnnotation  TreatmentRepresentation DEMO5
+ClinicData.xsd DEMO6
+PatientResource DEMO7
+PatientResource DEMO8
+PatientRepresentation DEMO9
+PatientRepresentation DEMO10
+getPatientByPatientId DEMO11
+getPatientByNameDob DEMO12
+addPatient DEMO13
+
+//ClinicService.Pom.xml
+<dependency>
+			<groupId>edu.stevens.cs548</groupId>
+			<artifactId>ClinicInit</artifactId>
+			<type>ejb</type>
+		</dependency>
+
+
+
+
