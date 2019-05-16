@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Clinic xmlns:prov="http://www.example.org/schemas/clinic/provider"
+ xmlns:pref="http://www.example.org/schemas/clinic/clinic_Ids"
+ xmlns:pat="http://www.example.org/schemas/clinic/patient"
+ xmlns:trmt="http://www.example.org/schemas/clinic/Treatment3"
+ xmlns:tns="http://www.example.org/Clinic"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.example.org/Clinic file:/E:/universityGraduate/CS548EnterpriseSoftwareSystem/Assignment/Assignment2/Solution3/Clinic.xsd">
+</tns:Clinic>
+<tns:content type="cli:clinicType">
+		<tns:patient type="pat:patientType" name="record_1">
+			<tns:patientId type="cid:PatientIdType"> 3425245 </tns:patientId>
+			<tns:name type="string"> adsf </tns:name>
+			<tns:dateofBirth type="date"> 2028-03-23 </tns:dateofBirth>
+			<tns:treatments type="pat:treatmentsType">
+				<tns:surgery type="trmt:SurgeryType"> 
+					<tns:ProviderId type="cid:ProviderIdType"> 2314135 </tns:ProviderId>
+					<tns:diagnosis type="string"> asdhj </tns:diagnosis>
+					<date type="date"> 1926-05-12 </date>
+					<surgeon type="string">dead</surgeon>
+				</tns:surgery>
+				<tns:drugTreatment type="trmt:DrugTreatment"> 
+					<tns:ProviderId type="cid:ProviderIdType"> 21234 </tns:ProviderId>
+					<tns:diagnosis type="string"> sdfaqg </tns:diagnosis>
+					<name type="string"> asdfrewt </name>
+					<dosage> qwerqg </dosage>
+					<physician>adfwer</physician>
+				</tns:drugTreatment>
+				<tns:surgery type="trmt:SurgeryType"> 
+					<tns:ProviderId type="cid:ProviderIdType"> 3248632 </tns:ProviderId>
+					<tns:diagnosis type="string"> asdhj </tns:diagnosis>
+					<date type="date"> 2016-02-05 </date>
+					<surgeon type="string">dead</surgeon>
+				</tns:surgery>
+			</tns:treatments>
+		</tns:patient>
