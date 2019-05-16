@@ -1,0 +1,30 @@
+929	INFO	Added Treatment154canc33er3for Patientedu.stevens.cs548.clinic.domain.Patient@57c77f51FromProvider 5... (details)	edu.stevens.cs548.clinic.test.InitBean	2017-12-4 04:26:44.961	{levelValue=800, timeMillis=1512361604961}
+928	INFO	Added Treatment SU 155 for patient helloworld123 id=151 Pid=488856789(details)	edu.stevens.cs548.clinic.test.InitBean	2017-12-4 04:26:44.960	{levelValue=800, timeMillis=1512361604960}
+927	INFO	Added Treatment DT 154 for patient helloworld123 id=151 Pid=488856789(details)	edu.stevens.cs548.clinic.test.InitBean	2017-12-4 04:26:44.960	{levelValue=800, timeMillis=1512361604960}
+926	INFO	Added Provider 7657361 with id 152 with NPI 7657361(details)	edu.stevens.cs548.clinic.test.InitBean	2017-12-4 04:26:44.947	{levelValue=800, timeMillis=1512361604947}
+925	INFO	Added Provider 512399412 with id 152 with NPI 512399412(details)	edu.stevens.cs548.clinic.test.InitBean	2017-12-4 04:26:44.944	{levelValue=800, timeMillis=1512361604944}
+924	INFO	Added Patient helloworld123 with Id 151 Pid=488856789(details)	edu.stevens.cs548.clinic.test.InitBean	2017-12-4 04:26:44.934	{levelValue=800, timeMillis=1512361604934}
+923	INFO	Your name here: Junhao Du(details)	edu.stevens.cs548.clinic.test.InitBean	2017-12-4 04:26:44.919	{levelValue=800, timeMillis=1512361604919}
+
+
+
+
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<treatmentRepresentation xmlns:ns2="http://cs548.stevens.edu/clinic/service/web/rest/data">
+    <ns2:id url="http://ec2-34-228-254-157.compute-1.amazonaws.com:8080/ClinicRestWebService-1.0.0/resources/treatment/123124124" relation="http://cs548.stevens.edu/clinic/rest/relations/treatment" mediaType="application/xml"/>
+    <ns2:patient url="http://ec2-34-228-254-157.compute-1.amazonaws.com:8080/ClinicRestWebService-1.0.0/resources/patient/151" relation="http://cs548.stevens.edu/clinic/rest/relations/patient" mediaType="application/xml"/>
+    <ns2:provider url="http://ec2-34-228-254-157.compute-1.amazonaws.com:8080/ClinicRestWebService-1.0.0/resources/provider/153" relation="http://cs548.stevens.edu/clinic/rest/relations/provider" mediaType="application/xml"/>
+    <ns2:diagnosis>asthema12</ns2:diagnosis>
+    <ns2:surgery>
+        <ns2:date>1995-07-06Z</ns2:date>
+    </ns2:surgery>
+    <repFactory/>
+    <treatmentDtoFactory/>
+</treatmentRepresentation>

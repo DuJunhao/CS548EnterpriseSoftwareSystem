@@ -1,0 +1,7 @@
+TreatmentBilling DrugResource DEMO1
+sun-resource.xml JMS Resource DEMO2
+PatientService DEMO3
+TreatmentDtoImplementsSerializable  PatientService catch and finnaly block DEMO4
+TreatmentDto PatientService DEMO5
+MessageDrivenBeanTreatmentListener DEMO6
+TreatmentBillingDAO 
