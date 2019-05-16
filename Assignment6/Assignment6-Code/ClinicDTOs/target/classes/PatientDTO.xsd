@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schema targetNamespace="http://www.example.org/clinic/schemas/patient"
+	elementFormDefault="unqualified" attributeFormDefault="unqualified" 
+	xmlns="http://www.w3.org/2001/XMLSchema" 
+	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+	jaxb:version="2.0"
+	xmlns:tns="http://www.example.org/clinic/schemas/patient" 
+	>
+<annotation>
+ 	<appinfo>
+ 		<jaxb:globalBindings>
+ 			<jaxb:javaType name="java.util.Date"
+ 				xmlType="date"
+ 				parseMethod="edu.stevens.cs548.clinic.service.dto.util.DateAdapter.parseDate"
+ 				printMethod="edu.stevens.cs548.clinic.service.dto.util.DateAdapter.printDate"
+ 			/>
+ 		</jaxb:globalBindings>
+ 	</appinfo>
+ </annotation>
+ 
+	<element name="patient-dto">
+		<complexType>
+			<sequence>
+				<element name="id" type="long" />
+				<element name="patient-id" type="long" />
+				<element name="name" type="string" />
+				<element name="dob" type="date" minOccurs="0" />
+				<element name="age" type="int" />
+				<element name="treatments" type="long" nillable="true"
+					minOccurs="0" maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+	
+	<element name="provider-dto">
+		<complexType>
+			<sequence>
+				<element name="NPI" type="long" />
+				<element name="name" type="string" />
+				<element name="spec" type="string" />
+				<element name="treatments" type="long" nillable="true"
+					minOccurs="0" maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+	
+	<element name="treatment-dto">
+		<complexType>
+			<sequence>
+				<element name="id" type="long"/>
+				<element name="diagnosis" type="string"/>
+				<element name="patient" type="long"/>
+				<element name="provider" type="long"/>
+				<!-- Use choice element to add treatment-specific information -->
+				<!-- Define complex types for treatment types below. -->
+				<choice>
+				<element name="DrugTreatment" type="tns:DrugTreatmentType"/>
+				<element name="Radiology" type="tns:RadiologyType"/>
+				<element name="Surgery" type="tns:SurgeryType"/>
+			</choice>
+			</sequence>
+		</complexType>
+	</element>
+	
+<complexType name="DrugTreatmentType">
+		<sequence>
+			<element name="name" type="string"/>
+			<element name="dosage" type="float"/>
+			
+		</sequence>
+	</complexType>
+
+	<complexType name="RadiologyType">
+		<sequence>
+			<element name="dates" type="date" minOccurs="1" maxOccurs="unbounded"> </element>
+		</sequence>
+	</complexType>
+
+	<complexType name="SurgeryType">
+		<sequence>
+			<element name="date" type="date" minOccurs="1"/>
+		</sequence>
+	</complexType>
+</schema>
+
