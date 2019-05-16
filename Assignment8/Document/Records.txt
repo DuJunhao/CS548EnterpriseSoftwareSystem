@@ -1,0 +1,44 @@
+
+
+	INFO	Added Provider 210654361 with id 53 with NPI 210654361(details)	edu.stevens.cs548.clinic.test.InitBean	2017-12-1 02:43:40.250	{levelValue=800, timeMillis=1512096220250}
+1942	INFO	Added Provider 816943212 with id 53 with NPI 816943212(details)	edu.stevens.cs548.clinic.test.InitBean	2017-12-1 02:43:40.247	{levelValue=800, timeMillis=1512096220247}
+1941	INFO	Added Treatment 52for patienthell0worldid=51Pid=136556789(details)	edu.stevens.cs548.clinic.test.InitBean	2017-12-1 02:43:40.237	{levelValue=800, timeMillis=1512096220237}
+1940	INFO	Added Patient hell0world with Id 51Pid=136556789(details)	edu.stevens.cs548.clinic.test.InitBean	2017-12-1 02:43:40.233	{levelValue=800, timeMillis=1512096220233}
+1939	INFO	Your name here: Junhao Du(details)
+
+
+
+Added Treatment154cancerfor Patientedu.stevens.cs548.clinic.domain.Patient@796f0021FromProvider 8164... (details)	edu.stevens.cs548.clinic.test.InitBean	2017-12-2 00:50:30.390	{levelValue=800, timeMillis=1512175830390}
+248	INFO	Added Treatment 154 for patient hew1orld id=151 Pid=134556789(details)	edu.stevens.cs548.clinic.test.InitBean	2017-12-2 00:50:30.389	{levelValue=800, timeMillis=1512175830389}
+247	INFO	Added Provider 213454361 with id 153 with NPI 213454361(details)	edu.stevens.cs548.clinic.test.InitBean	2017-12-2 00:50:30.365	{levelValue=800, timeMillis=1512175830365}
+246	INFO	Added Provider 816443212 with id 152 with NPI 816443212(details)	edu.stevens.cs548.clinic.test.InitBean	2017-12-2 00:50:30.360	{levelValue=800, timeMillis=1512175830360}
+245	INFO	Added Patient hew1orld with Id 151 Pid=134556789(details)	edu.stevens.cs548.clinic.test.InitBean	2017-12-2 00:50:30.345	{levelValue=800, timeMillis=1512175830345
+
+ public ProviderDto() {
+    	
+    }
+    public ProviderDto(Provider provider) {
+		// TODO Auto-generated constructor stub
+    	this.npi=provider.getNPI();
+    	this.name=provider.getName();
+    	this.spec=provider.getSpec();
+    	this.treatments.clear();
+    	for(int i=0;i<provider.getTreatmentIds().size();i++)
+    		this.treatments.add(provider.getTreatmentIds().get(i));
+	}
+
+
+public PatientDto() {
+    	
+    }
+    public PatientDto(Patient patient) {
+		// TODO Auto-generated constructor stub
+    	this.id=patient.getId();
+    	this.name=patient.getName();
+    	this.age=patient.getAge();
+    	this.dob=patient.getDob();
+    	this.patientId=patient.getPatientId();
+    	this.treatments.clear();
+    	for(int i=0;i<patient.getTreatmentIds().size();i++)
+    		this.treatments.add(patient.getTreatmentIds().get(i));
+	}
