@@ -1,0 +1,93 @@
+[EL Config]: metadata: The access type for the persistent class [class edu.stevens.cs548.clinic.domainmodel.Treatment] is set to [FIELD].
+[EL Config]: metadata: The target entity (reference) class for the many to one mapping element [field provider] is being defaulted to: class edu.stevens.cs548.clinic.domainmodel.Provider.
+[EL Config]: metadata: The target entity (reference) class for the many to one mapping element [field patient] is being defaulted to: class edu.stevens.cs548.clinic.domainmodel.Patient.
+[EL Config]: metadata: The access type for the persistent class [class edu.stevens.cs548.clinic.domainmodel.DrugTreatment] is set to [FIELD].
+[EL Config]: metadata: The access type for the persistent class [class edu.stevens.cs548.clinic.domainmodel.Patient] is set to [FIELD].
+[EL Config]: metadata: The target entity (reference) class for the one to many mapping element [field treatments] is being defaulted to: class edu.stevens.cs548.clinic.domainmodel.Treatment.
+[EL Config]: metadata: The access type for the persistent class [class edu.stevens.cs548.clinic.domainmodel.Radiology] is set to [FIELD].
+[EL Config]: metadata: The target class (reference) class for the element collection mapping element [field dates] is being defaulted to: class java.util.Date.
+[EL Config]: metadata: The access type for the persistent class [class edu.stevens.cs548.clinic.domainmodel.Surgery] is set to [FIELD].
+[EL Config]: metadata: The access type for the persistent class [class edu.stevens.cs548.clinic.domainmodel.Provider] is set to [FIELD].
+[EL Config]: metadata: The target entity (reference) class for the one to many mapping element [field treatments] is being defaulted to: class edu.stevens.cs548.clinic.domainmodel.Treatment.
+[EL Config]: metadata: The alias name for the entity class [class edu.stevens.cs548.clinic.domainmodel.DrugTreatment] is being defaulted to: DrugTreatment.
+[EL Config]: metadata: The alias name for the entity class [class edu.stevens.cs548.clinic.domainmodel.Treatment] is being defaulted to: Treatment.
+[EL Config]: metadata: The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: The table name for entity [class edu.stevens.cs548.clinic.domainmodel.DrugTreatment] is being defaulted to: DRUGTREATMENT.
+[EL Config]: metadata: The primary key column name for the inheritance class [class edu.stevens.cs548.clinic.domainmodel.DrugTreatment] is being defaulted to: ID.
+[EL Config]: metadata: The foreign key column name for the inheritance class [edu.stevens.cs548.clinic.domainmodel.DrugTreatment] is being defaulted to: ID.
+[EL Config]: metadata: The column name for element [dosage] is being defaulted to: DOSAGE.
+[EL Config]: metadata: The column name for element [drug] is being defaulted to: DRUG.
+[EL Config]: metadata: The alias name for the entity class [class edu.stevens.cs548.clinic.domainmodel.Patient] is being defaulted to: Patient.
+[EL Config]: metadata: The column name for element [dob] is being defaulted to: DOB.
+[EL Config]: metadata: The column name for element [PatientId] is being defaulted to: PATIENTID.
+[EL Config]: metadata: The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: The alias name for the entity class [class edu.stevens.cs548.clinic.domainmodel.Radiology] is being defaulted to: Radiology.
+[EL Config]: metadata: The table name for entity [class edu.stevens.cs548.clinic.domainmodel.Radiology] is being defaulted to: RADIOLOGY.
+[EL Config]: metadata: The primary key column name for the inheritance class [class edu.stevens.cs548.clinic.domainmodel.Radiology] is being defaulted to: ID.
+[EL Config]: metadata: The foreign key column name for the inheritance class [edu.stevens.cs548.clinic.domainmodel.Radiology] is being defaulted to: ID.
+[EL Config]: metadata: The alias name for the entity class [class edu.stevens.cs548.clinic.domainmodel.Surgery] is being defaulted to: Surgery.
+[EL Config]: metadata: The table name for entity [class edu.stevens.cs548.clinic.domainmodel.Surgery] is being defaulted to: SURGERY.
+[EL Config]: metadata: The primary key column name for the inheritance class [class edu.stevens.cs548.clinic.domainmodel.Surgery] is being defaulted to: ID.
+[EL Config]: metadata: The foreign key column name for the inheritance class [edu.stevens.cs548.clinic.domainmodel.Surgery] is being defaulted to: ID.
+[EL Config]: metadata: The column name for element [date] is being defaulted to: DATE.
+[EL Config]: metadata: The alias name for the entity class [class edu.stevens.cs548.clinic.domainmodel.Provider] is being defaulted to: Provider.
+[EL Config]: metadata: The column name for element [special] is being defaulted to: SPECIAL.
+[EL Config]: metadata: The collection table name for the basic collection/map mapping [field dates] is being defaulted to: Radiology_DATES.
+[EL Config]: metadata: The primary key column name for the mapping element [field dates] is being defaulted to: ID.
+[EL Config]: metadata: The foreign key column name for the mapping element [dates] is being defaulted to: Radiology_ID.
+[EL Config]: metadata: The value column name for the basic collection/map mapping element mapping element [dates] is being defaulted to: DATES.
+[EL Warning]: transaction: PersistenceUnitInfo ClinicDomainModel has transactionType RESOURCE_LOCAL and therefore jtaDataSource will be ignored
+[EL Info]: EclipseLink, version: Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd
+[EL Fine]: connection: Detected database platform: org.eclipse.persistence.platform.database.PostgreSQLPlatform
+[EL Config]: connection: Connection(1593245055)--connecting(DatabaseLogin(
+	platform=>PostgreSQLPlatform
+	user name=> "serf"
+	datasource URL=> "jdbc:postgresql://ec2-34-228-254-157.compute-1.amazonaws.com:5432/serfdb"
+))
+[EL Config]: connection: Connection(1446243714)--Connected: jdbc:postgresql://ec2-34-228-254-157.compute-1.amazonaws.com:5432/serfdb
+	User: serf
+	Database: PostgreSQL  Version: 9.2.22
+	Driver: PostgreSQL JDBC Driver  Version: 42.1.4.jre7
+[EL Config]: connection: Connection(1987154353)--connecting(DatabaseLogin(
+	platform=>PostgreSQLPlatform
+	user name=> "serf"
+	datasource URL=> "jdbc:postgresql://ec2-34-228-254-157.compute-1.amazonaws.com:5432/serfdb"
+))
+[EL Config]: connection: Connection(886386381)--Connected: jdbc:postgresql://ec2-34-228-254-157.compute-1.amazonaws.com:5432/serfdb
+	User: serf
+	Database: PostgreSQL  Version: 9.2.22
+	Driver: PostgreSQL JDBC Driver  Version: 42.1.4.jre7
+[EL Info]: connection: file:/E:/EclipseWorkspace/ClinicDomainModel/build/classes/_ClinicDomainModel_url=jdbc:postgresql://ec2-34-228-254-157.compute-1.amazonaws.com:5432/serfdb_user=serf login successful
+[EL Fine]: sql: Connection(1446243714)--ALTER TABLE TREATMENT DROP CONSTRAINT FK_TREATMENT_provider_fk
+[EL Fine]: sql: Connection(1446243714)--ALTER TABLE TREATMENT DROP CONSTRAINT FK_TREATMENT_patient_fk
+[EL Fine]: sql: Connection(1446243714)--ALTER TABLE DRUGTREATMENT DROP CONSTRAINT FK_DRUGTREATMENT_ID
+[EL Fine]: sql: Connection(1446243714)--ALTER TABLE SURGERY DROP CONSTRAINT FK_SURGERY_ID
+[EL Fine]: sql: Connection(1446243714)--ALTER TABLE RADIOLOGY DROP CONSTRAINT FK_RADIOLOGY_ID
+[EL Fine]: sql: Connection(1446243714)--ALTER TABLE Radiology_DATES DROP CONSTRAINT FK_Radiology_DATES_Radiology_ID
+[EL Fine]: sql: Connection(1446243714)--DROP TABLE PATIENT CASCADE
+[EL Fine]: sql: Connection(1446243714)--DROP TABLE TREATMENT CASCADE
+[EL Fine]: sql: Connection(1446243714)--DROP TABLE DRUGTREATMENT CASCADE
+[EL Fine]: sql: Connection(1446243714)--DROP TABLE SURGERY CASCADE
+[EL Fine]: sql: Connection(1446243714)--DROP TABLE RADIOLOGY CASCADE
+[EL Fine]: sql: Connection(1446243714)--DROP TABLE PROVIDER CASCADE
+[EL Fine]: sql: Connection(1446243714)--DROP TABLE Radiology_DATES CASCADE
+[EL Fine]: sql: Connection(1446243714)--CREATE TABLE PATIENT (ID BIGINT NOT NULL, PATIENTID BIGINT, DOB DATE, PATIENT_NAME VARCHAR(255), PRIMARY KEY (ID))
+[EL Fine]: sql: Connection(1446243714)--CREATE TABLE TREATMENT (ID BIGINT NOT NULL, TTYPE VARCHAR(31), DIAGNOSIS VARCHAR(255), patient_fk BIGINT, provider_fk BIGINT, PRIMARY KEY (ID))
+[EL Fine]: sql: Connection(1446243714)--CREATE TABLE DRUGTREATMENT (ID BIGINT NOT NULL, DOSAGE FLOAT, DRUG VARCHAR(255), PRIMARY KEY (ID))
+[EL Fine]: sql: Connection(1446243714)--CREATE TABLE SURGERY (ID BIGINT NOT NULL, DATE DATE, PRIMARY KEY (ID))
+[EL Fine]: sql: Connection(1446243714)--CREATE TABLE RADIOLOGY (ID BIGINT NOT NULL, PRIMARY KEY (ID))
+[EL Fine]: sql: Connection(1446243714)--CREATE TABLE PROVIDER (NPI BIGINT NOT NULL, PROVIDER_NAME VARCHAR(255), SPECIALIZATION VARCHAR(255), SPECIAL INTEGER, PRIMARY KEY (NPI))
+[EL Fine]: sql: Connection(1446243714)--CREATE TABLE Radiology_DATES (Radiology_ID BIGINT, DATES DATE)
+[EL Fine]: sql: Connection(1446243714)--ALTER TABLE TREATMENT ADD CONSTRAINT FK_TREATMENT_provider_fk FOREIGN KEY (provider_fk) REFERENCES PROVIDER (NPI)
+[EL Fine]: sql: Connection(1446243714)--ALTER TABLE TREATMENT ADD CONSTRAINT FK_TREATMENT_patient_fk FOREIGN KEY (patient_fk) REFERENCES PATIENT (ID)
+[EL Fine]: sql: Connection(1446243714)--ALTER TABLE DRUGTREATMENT ADD CONSTRAINT FK_DRUGTREATMENT_ID FOREIGN KEY (ID) REFERENCES TREATMENT (ID)
+[EL Fine]: sql: Connection(1446243714)--ALTER TABLE SURGERY ADD CONSTRAINT FK_SURGERY_ID FOREIGN KEY (ID) REFERENCES TREATMENT (ID)
+[EL Fine]: sql: Connection(1446243714)--ALTER TABLE RADIOLOGY ADD CONSTRAINT FK_RADIOLOGY_ID FOREIGN KEY (ID) REFERENCES TREATMENT (ID)
+[EL Fine]: sql: Connection(1446243714)--ALTER TABLE Radiology_DATES ADD CONSTRAINT FK_Radiology_DATES_Radiology_ID FOREIGN KEY (Radiology_ID) REFERENCES TREATMENT (ID)
+[EL Fine]: sql: Connection(1446243714)--DELETE FROM SEQUENCE WHERE SEQ_NAME = SEQ_GEN
+[EL Fine]: sql: Connection(1446243714)--SELECT * FROM SEQUENCE WHERE SEQ_NAME = SEQ_GEN
+[EL Fine]: sql: Connection(1446243714)--INSERT INTO SEQUENCE(SEQ_NAME, SEQ_COUNT) values (SEQ_GEN, 0)
+[EL Config]: connection: Connection(1446243714)--disconnect
+[EL Info]: connection: file:/E:/EclipseWorkspace/ClinicDomainModel/build/classes/_ClinicDomainModel_url=jdbc:postgresql://ec2-34-228-254-157.compute-1.amazonaws.com:5432/serfdb_user=serf logout successful
+[EL Config]: connection: Connection(1593245055)--disconnect
+[EL Config]: connection: Connection(886386381)--disconnect

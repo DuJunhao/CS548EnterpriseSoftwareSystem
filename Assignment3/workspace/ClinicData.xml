@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clinic:Clinic xmlns:clinic="http://www.example.org/clinic" xmlns:pat="http://www.example.org/schemas/clinic/patient" xmlns:prov="http://www.example.org/schemas/clinic/provider" xmlns:trmt="http://www.example.org/schemas/clinic/Treatment" xmlns:tns="http://www.example.org/schemas/clinic/clinic_Ids" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/Clinic file:/E:/universityGraduate/CS548EnterpriseSoftwareSystem/Assignment/Assignment3/workspace/Clinic.xsd">
+ 
+    <pat:patients>
+        <pat:PatientId>12345678</pat:PatientId>
+        <pat:name>jane</pat:name>
+        <pat:dob>1995-06-08</pat:dob>
+        <pat:treatments>
+            <pat:treatment>
+                <trmt:ProviderId>87654321</trmt:ProviderId>
+                <trmt:diagnosis>migraine</trmt:diagnosis>
+                <trmt:Surgery>
+                    <trmt:surgeon>Eason</trmt:surgeon>
+                    <trmt:data>2017-09-12</trmt:data>
+                </trmt:Surgery>
+            </pat:treatment>
+            <pat:treatment>
+                <trmt:ProviderId>76543218</trmt:ProviderId>
+                <trmt:diagnosis>Asthma</trmt:diagnosis>
+                <trmt:DrugTreatment>
+                    <trmt:name>panadol</trmt:name>
+                    <trmt:dosage>50.0</trmt:dosage>
+                    <trmt:physician>Albert</trmt:physician>
+                </trmt:DrugTreatment>
+            </pat:treatment>
+        </pat:treatments>
+    </pat:patients> 
+    
+    <pat:patients>
+        <pat:PatientId>23456781</pat:PatientId>
+        <pat:name>jhon</pat:name>
+        <pat:dob>1995-08-08</pat:dob>
+        <pat:treatments>
+            <pat:treatment>
+                <trmt:ProviderId>76543218</trmt:ProviderId>
+                <trmt:diagnosis>hiv/aids</trmt:diagnosis>
+                <trmt:DrugTreatment>
+                    <trmt:name>replax</trmt:name>
+                    <trmt:dosage>35.0</trmt:dosage>
+                    <trmt:physician>Eason</trmt:physician>
+                </trmt:DrugTreatment>
+            </pat:treatment>
+            <pat:treatment>
+                <trmt:ProviderId>87654321</trmt:ProviderId>
+                <trmt:diagnosis>hurt</trmt:diagnosis>
+                <trmt:Surgery>
+                    <trmt:surgeon>Irving</trmt:surgeon>
+                    <trmt:data>2000-03-08</trmt:data>
+                </trmt:Surgery>
+            </pat:treatment>
+            <pat:treatment>
+                <trmt:ProviderId>76543218</trmt:ProviderId>
+                <trmt:diagnosis>cancer</trmt:diagnosis>
+                <trmt:DrugTreatment>
+                    <trmt:name>panacea</trmt:name>
+                    <trmt:dosage>100.0</trmt:dosage>
+                    <trmt:physician>Eason</trmt:physician>
+                </trmt:DrugTreatment>
+            </pat:treatment>
+            <pat:treatment>
+                <trmt:ProviderId>65432187</trmt:ProviderId>
+                <trmt:diagnosis>cancer</trmt:diagnosis>
+                <trmt:Radiology>
+                    <trmt:data>2017-09-20</trmt:data>
+                    <trmt:radiologist>Albert</trmt:radiologist>
+                </trmt:Radiology>
+            </pat:treatment>
+        </pat:treatments>
+    </pat:patients>
+    
+    <prov:providers>
+        <prov:ProviderId>87654321</prov:ProviderId>
+        <prov:name>Irving</prov:name>
+        <prov:specialization>Surgery</prov:specialization>
+    </prov:providers>
+    
+    <prov:providers>
+        <prov:ProviderId>76543218</prov:ProviderId>
+        <prov:name>Eason</prov:name>
+        <prov:specialization>Oncology</prov:specialization>
+    </prov:providers>
+    
+    <prov:providers>
+        <prov:ProviderId>65432187</prov:ProviderId>
+        <prov:name>Albert</prov:name>
+        <prov:specialization>Radiology</prov:specialization>
+    </prov:providers>
+</clinic:Clinic>
